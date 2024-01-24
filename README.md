@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a simplified version of the classic Battleship game, allowing a single player to play against a computer opponent. This repository contains the source code for the game, which is developed using TypeScript with React (compatible with Next.js).
+This project is a simplified version of the classic Battleship game, allowing a single player to play against a computer opponent. This repository contains the source code for the game, which is developed using TypeScript with React .
 
 ## Getting Started
 
