@@ -221,6 +221,7 @@ export const App = () => {
   const resetGame = () => {
     setPlayerGrid(createInitialGrid());
     setComputerGrid(createInitialGrid());
+    setRemainingShips(initialShips);
     setPlacedShips([]);
     setShipOrientation("Horizontal");
     setGamePhase("placement");
