@@ -270,8 +270,10 @@ export const App = () => {
             </div>
           </>
           <p>Select a starting cell on the grid for the front of the ship.</p>
+          <p style={{ margin: "0px 0px 10px 0px" }}>
+            You can also remove existing ships on the board by pressing them.
+          </p>
           <Board grid={playerGrid} onCellClick={handleCellClick} />
-
           {remainingShips.length > 0 && (
             <p className="red-text">
               Please place all ships to start the battle.
