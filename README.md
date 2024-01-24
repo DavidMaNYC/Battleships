@@ -53,4 +53,4 @@ Command:
 
 ## Notes
 
-Lines 56 and 59 are commented out for testing purposes. However, if you want the opponent's actions to feel more realistic with some time delay, you can uncomment those lines.
+Lines 56 and 59 in App.tsx are commented out for testing purposes. However, if you want the opponent's actions to feel more realistic with some time delay, you can uncomment those lines.
