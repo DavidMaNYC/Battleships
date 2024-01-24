@@ -271,7 +271,7 @@ export const App = () => {
           </>
           <p>Select a starting cell on the grid for the front of the ship.</p>
           <p style={{ margin: "0px 0px 10px 0px" }}>
-            You can also remove existing ships on the board by pressing them.
+            You can also remove existing ships on the board by clicking them.
           </p>
           <Board grid={playerGrid} onCellClick={handleCellClick} />
           {remainingShips.length > 0 && (
