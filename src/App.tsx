@@ -240,9 +240,11 @@ export const App = () => {
             {initialShips.map((ship) => (
               <li key={ship.name}>
                 {ship.name} (Size: {ship.size}) -{" "}
-                {placedShips.some((s) => s.name === ship.name)
-                  ? "Placed"
-                  : "Available"}
+                {placedShips.some((s) => s.name === ship.name) ? (
+                  <strong className="red-text">Placed</strong>
+                ) : (
+                  <strong className="green-text"> Available</strong>
+                )}
               </li>
             ))}
           </ul>

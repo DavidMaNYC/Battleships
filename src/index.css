@@ -8,7 +8,6 @@ button {
 
 #root {
   margin: 0 auto;
-  text-align: center;
   width: 100vw;
   height: 100vh;
 }
@@ -76,6 +75,9 @@ button:disabled {
 
 .red-text {
   color: red;
+}
+.green-text {
+  color: green;
 }
 @media only screen and (max-width: 600px) {
   .board-container,
