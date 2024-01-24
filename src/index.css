@@ -2,13 +2,16 @@
 
 body,
 button {
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 #root {
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .app-container {
@@ -16,18 +19,9 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #f7f7f7;
+  height: 100%;
+  width: 100%;
   color: #333;
-}
-
-.placement-instructions,
-.battle-instructions,
-.ship-list li,
-.current-ship-info,
-.orientation-info {
-  margin-bottom: 1rem;
 }
 
 button {
@@ -58,17 +52,6 @@ button:disabled {
   margin-bottom: 1rem;
 }
 
-.cell {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e0e0e0;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
 .cell.ship {
   background-color: #d3d3d3;
 }
@@ -94,4 +77,14 @@ button:disabled {
 
 .red-text {
   color: red;
+}
+@media only screen and (max-width: 600px) {
+  .board-container,
+  .grid-container {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  button {
+    padding: 8px 16px;
+  }
 }
