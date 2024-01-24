@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Board } from "./components/Board";
 import { checkForWin, createInitialGrid } from "./utils/functions";
-import "./App.css";
 
 interface IShip {
   name: string;
@@ -296,11 +295,7 @@ export const App = () => {
               hideShips={true}
             />
           </div>
-          {gameFinished && (
-            <button style={{ margin: "10px" }} onClick={resetGame}>
-              New Game
-            </button>
-          )}
+          {gameFinished && <button onClick={resetGame}>New Game</button>}
         </>
       )}
     </div>
