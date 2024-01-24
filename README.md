@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
+# Battleship Game Development
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a simplified version of the classic Battleship game, allowing a single player to play against a computer opponent. This repository contains the source code for the game, which is developed using TypeScript with React (compatible with Next.js).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js
+- npm or yarn
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+1. Clone the repository:
+2. Npm install
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Start the development server:
+
+Command:
+-npm run dev
+
+## Game Rules
+
+The game consists of two phases: ship placement and attack phase.
+In the ship placement phase, players place a set of 4 ships on a 10x10 grid.
+Ships must not overlap or collide.
+During the attack phase, the player and the computer take turns attacking each other's grid.
+The game is won when all the opponent's ships are destroyed.
+
+## Game Board UX
+
+The board is a 10x10 grid.
+The player's grid shows ship placements, while the opponent's (CPU) grid is hidden unless a ship is hit.
+
+## Ship Placement
+
+Ships of lengths 5, 4, 3, and 3 must be placed on the board.
+Ships are placed by clicking on the desired starting cell in the grid and are oriented horizontally by default.
+Orientation can be toggled before placing a ship.
+
+## Gameplay
+
+After all ships are placed, the battle begins.
+Click on the opponent's grid to attack.
+The game ends when all ships of either the player or the computer are sunk.
+
+## Tests
+
+Command:
+-npm run test
+
+## Notes
+
+Lines 56 and 59 are commented out for testing purposes. However, if you want the opponent's actions to feel more realistic with some time delay, you can uncomment those lines.

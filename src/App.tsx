@@ -53,8 +53,10 @@ export const App = () => {
         handleGameEnd("player")
       );
       setPlayerTurn(false);
+      // setTimeout(() => {
       computerMove();
       setPlayerTurn(true);
+      // }, 500);
     }
   };
 
